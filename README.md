@@ -53,8 +53,7 @@ CODE NO :- 1
         sys.exit()
     ```
 
-OUTPUT :-
-Addition= 15
+
 
 [2]|[A] LANGUAGE:- "Python"
 
@@ -74,9 +73,7 @@ CODE NO :- 2
     
     outerFunction()
 
-OUTPUT :-
-This is the outer function
-This is the inner function
+
 
 [3]|[A] LANGUAGE:- "Python"
 
@@ -94,8 +91,6 @@ CODE NO :- 3
     continue
     print("Total word in the string is:",count)
 
-OUTPUT :-
-Total word in the string is: 4
 
 [4]|[A] LANGUAGE:- "Python"
 
@@ -128,14 +123,6 @@ CODE NO :- 4
     init_tuple=((1,2),)*7
     print(len(init_tuple[3:8]))
 
-OUTPUT :-
-0
-True
-False
-('Python', 'Python')
-<class 'str'>
-TypeError
-4
 
 [5]|[A] LANGUAGE:- "Python"
 
@@ -151,8 +138,7 @@ CODE NO :- 5
     s1=s.replace("a","b")
     print(s1)
 
-OUTPUT :-
-bbbbbbbbbbbbbb
+
 
 [6]|[A] LANGUAGE:- "Python"
 
@@ -173,8 +159,7 @@ CODE NO :- 6
     else:
     print("City is not in the list")
 
-OUTPUT :-
-Hello Mumbai....namaskar
+
 
 [7]|[A] LANGUAGE:- "Python"
 
@@ -197,41 +182,85 @@ CODE NO :- 7
     doubles={x:2*x for x in range(1,6)}
     print(doubles)
 
-OUTPUT :-
-[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+
 
 [8]|[A] LANGUAGE:- "Python"
 
-PROBLEM STATEMENT:- Mixed operations (conditions, dictionary, strings, etc).
+PROBLEM STATEMENT:- Find maximum and minimum among three numbers using nested if-else.
 
 CODE NO :- 8
 
-    print("Multiple operations code")
-
-OUTPUT :-
-Varies
+    n1 = int(input('Enter the value of paper1:'))
+    n2 = int(input('Enter the value of paper2:'))
+    n3 = int(input('Enter the value of paper3:'))
+    
+    if n1 > n2:
+    if n1 > n3:
+    print("n1 is greater")
+    else:
+    print("n3 is greater")
+    else:
+    if n2 > n3:
+    print("n2 is greater")
+    else:
+    print("n3 is greater")
+    
+    if n1 < n2:
+    if n1 < n3:
+    print("n1 is smaller")
+    else:
+    print("n3 is smaller")
+    else:
+    if n2 < n3:
+    print("n2 is smaller")
+    else:
+    print("n3 is smaller")
 
 [9]|[A] LANGUAGE:- "Python"
 
-PROBLEM STATEMENT:- Loop and pattern operations.
+PROBLEM STATEMENT:- Check grade based on percentage using if-elif ladder.
 
 CODE NO :- 9
     
-    print("Loop based operations")
-
-OUTPUT :-
-Varies
+    per = int(input('Enter your percentage:'))
+    
+    if per >= 90:
+    print("A")
+    elif per >= 80 and per < 90:
+    print("B")
+    elif per >= 60 and per < 80:
+    print("C")
+    else:
+    print("FAIL")
 
 [10]|[A] LANGUAGE:- "Python"
 
-PROBLEM STATEMENT:- Basic calculations and conversions.
+PROBLEM STATEMENT:- Perform dictionary operations and string methods.
 
 CODE NO :- 10
 
-    print("Conversions and swapping")
-
-OUTPUT :-
-Varies
+    mydict = {
+    "name": "prashant",
+    "professional": "developer",
+    "enpid":1001
+    }
+    print(mydict)
+    
+    mydict[102] = "peter"
+    print(mydict)
+    
+    for x in mydict:
+    print(x)
+    
+    for x in mydict.values():
+    print(x)
+    
+    for x,y in mydict.items():
+    print(x,y)
+    
+    name = "prashantjha"
+    print(name[0:5])
+    print(name[::-1])
 
 [11]|[A] LANGUAGE:- "Python"
 
@@ -239,10 +268,26 @@ PROBLEM STATEMENT:- Find maximum among five numbers.
 
 CODE NO :- 11
 
-    print("Max value logic")
+    v1 = float(input("Enter value 1: "))
+    v2 = float(input("Enter value 2: "))
+    v3 = float(input("Enter value 3: "))
+    v4 = float(input("Enter value 4: "))
+    v5 = float(input("Enter value 5: "))
+    
+    max_val = v1
+    
+    if v2 > max_val:
+    max_val = v2
+    if v3 > max_val:
+    max_val = v3
+    if v4 > max_val:
+    max_val = v4
+    if v5 > max_val:
+    max_val = v5
+    
+    print("Maximum value is:", max_val)
 
-OUTPUT :-
-30
+
 
 [12]|[A] LANGUAGE:- "Python"
 
@@ -261,15 +306,4 @@ CODE NO :- 12
     print(complex(False))
     print(bool(0))
 
-OUTPUT :-
-3
-1
-0
-4
-4.22
-(3+0j)
-(12.5+0j)
-(1+0j)
-0j
-False
 
