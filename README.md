@@ -306,4 +306,124 @@ CODE NO :- 12
     print(complex(False))
     print(bool(0))
 
+[13]|[A] LANGUAGE:- "Python"
+
+PROBLEM STATEMENT:- Check whether a number is prime or not.
+
+CODE NO :- 13
+
+    num = int(input("Enter a number: "))
+    
+    if num > 1:
+        for i in range(2, num):
+            if num % i == 0:
+                print("Not Prime")
+                break
+        else:
+            print("Prime")
+    else:
+        print("Not Prime")
+
+
+[14]|[A] LANGUAGE:- "Python"
+
+PROBLEM STATEMENT:- Print Fibonacci series up to n terms.
+
+CODE NO :- 14
+
+    n = int(input("Enter number of terms: "))
+    
+    a = 0
+    b = 1
+    
+    for i in range(n):
+        print(a)
+        a, b = b, a + b
+
+[15]|[A] LANGUAGE:- "Python"
+
+PROBLEM STATEMENT:- Count vowels and consonants in a string.
+
+CODE NO :- 15
+
+    name = input("Enter a string: ")
+    
+    vowels = 0
+    consonants = 0
+    
+    for i in name:
+        if i.lower() in "aeiou":
+            vowels += 1
+        elif i.isalpha():
+            consonants += 1
+    
+    print("Vowels =", vowels)
+    print("Consonants =", consonants)
+
+ 
+ [16]|[A] LANGUAGE:- "Python"
+
+ PROBLEM STATEMENT:- Implement binary search on a sorted list.
+
+ CODE NO :- 16
+
+    arr = [10, 20, 30, 40, 50, 60]
+    target = int(input("Enter element to search: "))
+    
+    left = 0
+    right = len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if arr[mid] == target:
+            print("Element found at index:", mid)
+            break
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    else:
+        print("Element not found")
+
+[17]|[A] LANGUAGE:- "Python"
+
+PROBLEM STATEMENT:- Find frequency of each character using dictionary.
+
+CODE NO :- 17
+
+    s = input("Enter a string: ")
+    
+    freq = {}
+    
+    for char in s:
+        if char in freq:
+            freq[char] += 1
+        else:
+            freq[char] = 1
+    
+    print("Character frequency:")
+    for k, v in freq.items():
+        print(k, ":", v)        
+
+
+[18]|[A] LANGUAGE:- "Python"
+
+PROBLEM STATEMENT:- Find all duplicate elements in a list.
+
+CODE NO :- 18
+
+    lst = [1, 2, 3, 2, 4, 5, 1, 6]
+    
+    seen = set()
+    duplicates = set()
+    
+    for num in lst:
+        if num in seen:
+            duplicates.add(num)
+        else:
+            seen.add(num)
+    
+    print("Duplicate elements are:", list(duplicates))
+
 
