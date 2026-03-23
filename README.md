@@ -426,4 +426,76 @@ CODE NO :- 18
     
     print("Duplicate elements are:", list(duplicates))
 
+[19]|[A] LANGUAGE:- "Python"
+
+PROBLEM STATEMENT:- Find longest substring without repeating characters.
+
+CODE NO :- 19
+
+    s = input("Enter a string: ")
+    
+    char_set = set()
+    left = 0
+    max_length = 0
+    
+    for right in range(len(s)):
+        while s[right] in char_set:
+            char_set.remove(s[left])
+            left += 1
+        
+        char_set.add(s[right])
+        max_length = max(max_length, right - left + 1)
+    
+    print("Longest substring length:", max_length)
+
+
+
+[20]|[A] LANGUAGE:- "Python"
+
+PROBLEM STATEMENT:- Find two numbers in list whose sum equals target (Two Sum problem).
+
+CODE NO :- 20
+
+    nums = [2, 7, 11, 15]
+    target = int(input("Enter target: "))
+    
+    hashmap = {}
+    
+    for i, num in enumerate(nums):
+        diff = target - num
+        
+        if diff in hashmap:
+            print("Indices:", hashmap[diff], i)
+            break
+        
+        hashmap[num] = i
+    else:
+        print("No solution found")
+
+
+
+[21]|[A] LANGUAGE:- "Python"
+
+PROBLEM STATEMENT:- Check balanced parentheses using stack.
+
+CODE NO :- 21
+
+    expr = input("Enter expression: ")
+    
+    stack = []
+    pairs = {')': '(', '}': '{', ']': '['}
+    
+    for char in expr:
+        if char in "({[":
+            stack.append(char)
+        elif char in ")}]":
+            if not stack or stack[-1] != pairs[char]:
+                print("Not Balanced")
+                break
+            stack.pop()
+    else:
+        if not stack:
+            print("Balanced")
+        else:
+            print("Not Balanced")
 
